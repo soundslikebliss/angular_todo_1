@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>test1</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.2.0/slate/bootstrap.min.css">
+	<link rel="stylesheet" href="styles.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+	<script src="todoController.js"></script>
+
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div ng-app="todo">
+				<div class="col-sm-6 col-md-offset-3">
+					<div ng-controller="todoController">
+
+						<form class="form-inline" role="form">
+							<div class="form-group">
+								<input type="text" ng-model="formTask" class="form-control" placeholder="new task title">
+								<button ng-click="addTask()">Add</button>
+							</div>
+						</form>
+						<br>
+
+						<div ng-repeat="task in tasks" class="well">
+							<h2><strong>task {{task.number}}:</strong> {{task.title}}</h2>
+			<!-- 				<h3>critical info, yo:</h3>  -->
+							{{task.description}}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>
