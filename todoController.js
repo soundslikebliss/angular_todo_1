@@ -18,6 +18,7 @@ todo.controller('todoController', ['$scope', function ($scope) {
 
 	$scope.addTask = function() {
 		$scope.tasks.push({title:$scope.formTask});
+		$scope.formTask = '';
 	}
 
 }]);
